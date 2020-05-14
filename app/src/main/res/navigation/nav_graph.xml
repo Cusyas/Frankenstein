@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.pingwin.frankenstein.Fragments.MainFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_snackbarFragment"
+            app:destination="@id/snackbarFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_ToastFragment"
+            app:destination="@id/ToastFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_workManagerFragment2"
+            app:destination="@id/workManagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ToastFragment"
+        android:name="com.pingwin.frankenstein.Fragments.ToastFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_toast">
+        <action
+            android:id="@+id/action_ToastFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/snackbarFragment"
+        android:name="com.pingwin.frankenstein.Fragments.SnackbarFragment"
+        android:label="fragment_snackbar"
+        tools:layout="@layout/fragment_snackbar" >
+        <action
+            android:id="@+id/action_snackbarFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.pingwin.frankenstein.Fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workManagerFragment"
+        android:name="com.pingwin.frankenstein.Fragments.WorkManagerFragment"
+        android:label="fragment_work_manager"
+        tools:layout="@layout/fragment_work_manager" >
+        <action
+            android:id="@+id/action_workManagerFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+    </fragment>
+</navigation>
